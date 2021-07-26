@@ -70,12 +70,8 @@ const add = (a: number, b: number): number => {
   return a + b
 }
 
-const introduce = (person: Person): void => {
-  console.log(`Hello I'm ${person.name}, And I'm ${person.age} years old.`)
+const introduce = ({name, age, hobby}: Person): void => {
+  console.log(`Hello I'm ${name}, And I'm ${age} years old. `)
 }
 
-introduce({
-  name: "Fahim",
-  age: 16,
-  hobby: "Sleeping"
-})
+introduce(person)
