@@ -58,3 +58,24 @@ const persons: Person[] = [
   },
    
 ]
+
+//---------------------function--------------------
+
+const greeting = (name: string): void => {
+  console.log(`Hello ${name}`)
+}
+greeting("Fahim")
+
+const add = (a: number, b: number): number => {
+  return a + b
+}
+
+const introduce = (person: Person): void => {
+  console.log(`Hello I'm ${person.name}, And I'm ${person.age} years old.`)
+}
+
+introduce({
+  name: "Fahim",
+  age: 16,
+  hobby: "Sleeping"
+})
