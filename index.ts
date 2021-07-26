@@ -9,30 +9,52 @@ let isMarried: boolean = false;
 
 
 
-            //---------------------union type----------------------
+//---------------------union type----------------------
 
 type NumberOrString = number | string
 // let studentId: number | string = 10876;
 let studentId: NumberOrString = 433454;
-studentId = "amf-324"; 
+studentId = "amf-324";
 
-            //---------------------Object--------------------
+//---------------------Object--------------------
 
-type PersonType = {name: string, age: number, hobby: string}       
+type PersonType = { name: string, age: number, hobby: string }
 interface Person {
-  name : string;
-  age  : number;
+  name: string;
+  age: number;
   hobby?: string
-}     
+}
 
-let person: Person ={
-  name : "Abdul Mozid Fahim",
-  age  : 16,
+let person: Person = {
+  name: "Abdul Mozid Fahim",
+  age: 16,
   hobby: "Sleeping"
-}   
+}
 
-let person2: Person ={
-  name : "Someone",
-  age  : 11,
+let person2: Person = {
+  name: "Someone",
+  age: 11,
   hobby: "traveling"
 }
+
+
+//---------------------Array--------------------
+
+const number: (string | number)[] = [33, 32, 13, 34, "what ever"]
+const persons: Person[] = [
+  {
+    name: "Someone",
+    age: 11,
+    hobby: "traveling"
+  },
+  {
+    name: "Someone",
+    age: 11,
+    hobby: "traveling"
+  },
+  {
+    name: "Someone",
+    age: 11,
+  },
+   
+]
