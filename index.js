@@ -1,3 +1,4 @@
+"use strict";
 // dataType = Any, number, string, boolean, object, Array, Tuple, Enum, undefined, null, void, never, unknown
 var myName = "Abdul Mozid Fahim";
 var age;
@@ -31,7 +32,7 @@ var persons = [
     },
     {
         name: "Someone",
-        age: 11
+        age: 11,
     },
 ];
 //---------------------function--------------------
@@ -42,11 +43,22 @@ greeting("Fahim");
 var add = function (a, b) {
     return a + b;
 };
-var introduce = function (person) {
-    console.log("Hello I'm " + person.name + ", And I'm " + person.age + " years old.");
+var introduce = function (_a) {
+    var name = _a.name, age = _a.age;
+    console.log("Hello I'm " + name + ", And I'm " + age + " years old.");
 };
-introduce({
-    name: "Fahim",
-    age: 16,
-    hobby: "Sleeping"
-});
+introduce(person);
+var getArray = function (arr) {
+    return arr;
+};
+getArray(["abcd", "efgh", "igkl"]);
+getArray([1, 2, 3, 5]);
+//---------------------enum--------------------
+var friendsGfName;
+(function (friendsGfName) {
+    friendsGfName["Rahat"] = "Lima";
+    friendsGfName["Mashraful"] = "Sayma";
+    friendsGfName["Yakub"] = "Moni";
+    friendsGfName["Azim"] = "Reshma";
+})(friendsGfName || (friendsGfName = {}));
+console.log("What is the " + friendsGfName.Mashraful + " boyfriend Name??");
